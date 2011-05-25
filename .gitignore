@@ -1,4 +1,4 @@
 *.class
 *.log
 *.settings
-*.jar
+*.classpath

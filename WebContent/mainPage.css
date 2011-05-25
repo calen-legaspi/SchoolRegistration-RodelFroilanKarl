@@ -1,0 +1,45 @@
+@CHARSET "UTF-8";
+
+ body {
+    background: #FFFFFF;
+  }
+  
+  .headerwrapper {
+    
+    
+    position: absolute;
+    top: 10px;
+    left: 50px;
+    width: 90%;
+    height: 50px;
+    border: 1px #000000;
+  
+  }
+  
+  .menuwrapper {
+    
+    background: #DDDDDD;
+    position: absolute;
+    top: 100px;
+    left: 10px;
+    width: 150px;
+    border: 2px #000000 solid;
+    z-index: 1;
+  
+  }
+  
+  .contentwrapper {
+    
+    background: #DDDDDD;
+
+    position: absolute;
+    top:100px;
+    left: 170px;
+    width: 80%;
+    border: 1px;
+    z-index: 0;
+    padding: 10px;
+    
+    border: 1px #000000 solid;
+  
+  }
