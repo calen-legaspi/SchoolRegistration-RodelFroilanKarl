@@ -27,7 +27,7 @@ public class SubjectDAOTest {
 	@Test
 	public void getSubjectByIdTest() throws DAOException {
 		
-		Subject subject = new Subject("STR080",EducationLevel.GRADUATE,"STAR 101");
+		Subject subject = new Subject("STR080",EducationLevel.GRADUATE,"STARS 101");
 		
 		Subject subject2 = subjectDao.getSubjectById("STR080");
 		
@@ -39,26 +39,26 @@ public class SubjectDAOTest {
 		
 		Collection<Subject> allSubjects = new ArrayList<Subject>();
 		
-		allSubjects.add(new Subject("STR080", Subject.returnEnumValue(1), "STAR 101"));
-		allSubjects.add(new Subject("FIL889", Subject.returnEnumValue(1), "ADVANCE FILIPINO I"));
-		allSubjects.add(new Subject("NUR661", Subject.returnEnumValue(1), "ADVANCE NURSING III"));
-		allSubjects.add(new Subject("LAW101", Subject.returnEnumValue(1), "BASIC LAW I"));
-		allSubjects.add(new Subject("ROY105", Subject.returnEnumValue(1), "ROYAL FAMILY III"));
-		allSubjects.add(new Subject("MATH657", Subject.returnEnumValue(0), "ALGEBRA II"));
-		allSubjects.add(new Subject("MATH311", Subject.returnEnumValue(0), "BASIC TRIGONOMETRY"));
-		allSubjects.add(new Subject("MOR888", Subject.returnEnumValue(0), "MORALITY I"));
-		allSubjects.add(new Subject("MOV002", Subject.returnEnumValue(0), "MOVIE BASICS II"));
-		allSubjects.add(new Subject("MOV001", Subject.returnEnumValue(0), "MOVIE BASICS I"));
-		allSubjects.add(new Subject("CHIN656", Subject.returnEnumValue(1), "CHINA CULTURE I"));
-		allSubjects.add(new Subject("PHIST003", Subject.returnEnumValue(1), "PHILIPPINE HISTORY I"));
-		allSubjects.add(new Subject("MATH999", Subject.returnEnumValue(1), "QUANTUM PHYSICS"));
-		allSubjects.add(new Subject("LIFE333", Subject.returnEnumValue(1), "LIFE LESSONS 2"));
-		allSubjects.add(new Subject("PE101", Subject.returnEnumValue(1), "PHYSICAL EDUCATION I"));
-		allSubjects.add(new Subject("MATH667", Subject.returnEnumValue(0), "CALCULUS II"));
-		allSubjects.add(new Subject("MATH666", Subject.returnEnumValue(0), "CALCULUS I"));
-		allSubjects.add(new Subject("MATH122", Subject.returnEnumValue(0), "BASIC ALGEBRA"));
-		allSubjects.add(new Subject("LIFE101", Subject.returnEnumValue(0), "LIFE LESSONS"));
-		allSubjects.add(new Subject("PHL5", Subject.returnEnumValue(0), "PHILOSOPHY"));
+		allSubjects.add(new Subject("STR080", EducationLevel.GRADUATE, "STARS 101"));
+		allSubjects.add(new Subject("FIL889", EducationLevel.GRADUATE, "ADVANCE FILIPINO I"));
+		allSubjects.add(new Subject("NUR661", EducationLevel.GRADUATE, "ADVANCE NURSING III"));
+		allSubjects.add(new Subject("LAW101", EducationLevel.GRADUATE, "BASIC LAW I"));
+		allSubjects.add(new Subject("ROY105", EducationLevel.GRADUATE, "ROYAL FAMILY III"));
+		allSubjects.add(new Subject("MATH657", EducationLevel.UNDERGRADUATE, "ALGEBRA II"));
+		allSubjects.add(new Subject("MATH311", EducationLevel.UNDERGRADUATE, "BASIC TRIGONOMETRY"));
+		allSubjects.add(new Subject("MOR888", EducationLevel.UNDERGRADUATE, "MORALITY I"));
+		allSubjects.add(new Subject("MOV002", EducationLevel.UNDERGRADUATE, "MOVIE BASICS II"));
+		allSubjects.add(new Subject("MOV001", EducationLevel.UNDERGRADUATE, "MOVIE BASICS I"));
+		allSubjects.add(new Subject("CHIN656", EducationLevel.GRADUATE, "CHINA CULTURE I"));
+		allSubjects.add(new Subject("PHIST003", EducationLevel.GRADUATE, "PHILIPPINE HISTORY I"));
+		allSubjects.add(new Subject("MATH999", EducationLevel.GRADUATE, "QUANTUM PHYSICS"));
+		allSubjects.add(new Subject("LIFE333", EducationLevel.GRADUATE, "LIFE LESSONS 2"));
+		allSubjects.add(new Subject("PE101", EducationLevel.GRADUATE, "PHYSICAL EDUCATION I"));
+		allSubjects.add(new Subject("MATH667", EducationLevel.UNDERGRADUATE, "CALCULUS II"));
+		allSubjects.add(new Subject("MATH666", EducationLevel.UNDERGRADUATE, "CALCULUS I"));
+		allSubjects.add(new Subject("MATH122", EducationLevel.UNDERGRADUATE, "BASIC ALGEBRA"));
+		allSubjects.add(new Subject("LIFE101", EducationLevel.UNDERGRADUATE, "LIFE LESSONS"));
+		allSubjects.add(new Subject("PHL5", EducationLevel.UNDERGRADUATE, "PHILOSOPHY"));
 		assertTrue(allSubjects.equals(subjectDao.getAllSubjects()));
 		
 	}

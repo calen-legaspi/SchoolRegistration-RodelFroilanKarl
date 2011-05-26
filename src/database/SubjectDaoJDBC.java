@@ -7,6 +7,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Collection;
 
+import domain.EducationLevel;
 import domain.Subject;
 
 public class SubjectDaoJDBC implements SubjectDAO {
@@ -29,10 +30,11 @@ public class SubjectDaoJDBC implements SubjectDAO {
 				ResultSet rs = pstmt.executeQuery();
 
 				while (rs.next()) {
-					result = Subject.makeNewSubject(
+					result = new Subject(
 							rs.getString("subjectCode"),
-							Subject.returnEnumValue(rs.getInt("subjectLevel")),
-							"subjectName");
+							Enum.valueOf(EducationLevel.class, rs.getString("subjectLevel")),
+							rs.getString("subjectName"));
+					
 				}
 
 			} finally {
@@ -60,10 +62,10 @@ public class SubjectDaoJDBC implements SubjectDAO {
 				ResultSet rs = pstmt.executeQuery();
 
 				while (rs.next()) {
-					allSubjects.add(Subject.makeNewSubject(
+					allSubjects.add(new Subject(
 							rs.getString("subjectCode"),
-							Subject.returnEnumValue(rs.getInt("subjectLevel")),
-							"subjectName"));
+							Enum.valueOf(EducationLevel.class, rs.getString("subjectLevel")),
+							rs.getString("subjectName")));
 				}
 
 			} finally {

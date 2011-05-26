@@ -1,9 +1,11 @@
 package services;
 
 import java.math.BigDecimal;
+import java.util.Collection;
 
+import database.DAOException;
 import database.StudentDAO;
-import database.StudentDaoJDBC;
+import domain.Student;
 
 public class StudentService {
 	
@@ -11,14 +13,23 @@ public class StudentService {
 	public static final BigDecimal undergraduateFees = new BigDecimal("2000.00");
 	public static final BigDecimal graduateFees = new BigDecimal("4000.00");
 	
-	private StudentDAO studentDao;
+	private StudentDAO studentDao = null;
 	
-	public void setStudentDao(StudentDAO studentDao) {
-		this.studentDao = studentDao;
-	}
+	//public void setStudentDao(StudentDAO studentDao) {
+	//	this.studentDao = studentDao;
+	//}
 	
 	public StudentService(StudentDAO studentDao) {
 		this.studentDao = studentDao;
 	}
+	
+	public Collection<Student> returnAllStudents() throws DAOException{
+		return studentDao.getAllStudents();
+	}
+	
+	public boolean checkStudentListIsEmpty() throws DAOException{
+		return studentDao.getAllStudents().isEmpty();
+	}
+	
 	
 }

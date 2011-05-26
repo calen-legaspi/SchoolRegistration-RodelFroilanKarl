@@ -30,10 +30,10 @@ public class ScheduleDaoJDBC implements ScheduleDAO {
 				ResultSet rs = pstmt.executeQuery();
 
 				while (rs.next()) {
-					result = new Schedule(Schedule
-							.returnEnumValue(rs.getString("dayOfTheWeek")),
-					// Enum.valueOf(Schedule.Day.class,
-					// rs.getString("dayOfTheWeek")),
+					result = new Schedule(
+							
+							Enum.valueOf(Schedule.Day.class,
+							rs.getString("dayOfTheWeek")),
 							Time.valueOf(rs.getString("startTime")), Time
 									.valueOf(rs.getString("endTime")));
 
@@ -61,10 +61,12 @@ public class ScheduleDaoJDBC implements ScheduleDAO {
 				ResultSet rs = pstmt.executeQuery();
 
 				while (rs.next()) {
-					schedules.add(new Schedule(Schedule
-							.returnEnumValue(rs.getString("dayOfTheWeek")),
-							Time.valueOf(rs.getString("startTime")), Time
-									.valueOf(rs.getString("endTime"))));
+					schedules.add(new Schedule(
+							
+							Enum.valueOf(Schedule.Day.class,
+									rs.getString("dayOfTheWeek")),
+							Time.valueOf(rs.getString("startTime")), 
+							Time.valueOf(rs.getString("endTime"))));
 				}
 			} finally {
 				conn.close();

@@ -19,19 +19,6 @@ public class Schedule {
 		
 		
 	}
-	
-	public static Day returnEnumValue(String string){
-		if("MON".equals(string)){ return Day.MONDAY; }
-		else if("TUE".equals(string)){ return Day.TUESDAY; }
-		else if("WED".equals(string)){ return Day.WEDNESDAY; }
-		else if("THU".equals(string)){ return Day.THURSDAY; }
-		else if("FRI".equals(string)){ return Day.FRIDAY; }
-		else if("SAT".equals(string)){ return Day.SATURDAY; }
-		else if("SUN".equals(string)){ return Day.SUNDAY; }
-		else {
-			throw new IllegalArgumentException("Invalid Day of the Week.");
-		}
-	}
 
 	private Schedule.Day classDay;
 	private Time classStartTime;

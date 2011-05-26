@@ -29,8 +29,7 @@ public class TeacherDAO {
 				ResultSet rs = pstmt.executeQuery();
 
 				while (rs.next()) {
-					result = Teacher
-							.makeNewTeacher(rs.getInt("teacherNo"),
+					result = new Teacher(rs.getInt("teacherNo"),
 									rs.getString("firstName"),
 									rs.getString("lastName"));
 				}
@@ -57,7 +56,7 @@ public class TeacherDAO {
 				ResultSet rs = pstmt.executeQuery();
 
 				while (rs.next()) {
-					result.add(Teacher.makeNewTeacher(rs.getInt("teacherNo"),
+					result.add(new Teacher(rs.getInt("teacherNo"),
 							rs.getString("firstName"), rs.getString("lastName")));
 				}
 			} finally {

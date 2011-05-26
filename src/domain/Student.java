@@ -95,5 +95,23 @@ public class Student extends SystemUser {
 		return true;
 	}
 
+	public long getMyIdNo() {
+		return myIdNo;
+	}
+
+	public String getMyFirstName() {
+		return myFirstName;
+	}
+
+	public String getMyLastName() {
+		return myLastName;
+	}
+
+	public Collection<SchoolClass> getStudentClassList() {
+		return studentClassList;
+	}
+	
+	
+
 
 }
