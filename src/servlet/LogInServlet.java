@@ -49,7 +49,9 @@ public class LogInServlet extends HttpServlet {
 
 			if ("admin".equals(type)) {
 
-				// TODO: admin page
+				session.setAttribute("adminIsLoggedIn", "true");
+				
+				response.sendRedirect("admin-view");
 
 			} else if ("student".equals(type)) {
 

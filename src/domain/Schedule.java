@@ -34,6 +34,10 @@ public class Schedule {
 	public String toString() {
 		return classDay.commonName + " " + classStartTime + " " + classEndTime+"\n";
 	}
+	
+	public String getAllData() {
+		return classDay + "," + classStartTime + "," + classEndTime;
+	}
 
 	public Schedule.Day getClassDay() {
 		return classDay;

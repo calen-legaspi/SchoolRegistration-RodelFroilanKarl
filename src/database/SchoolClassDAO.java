@@ -21,5 +21,7 @@ public interface SchoolClassDAO {
 
 	public Long getPrimaryKey(Subject subjectById, Schedule scheduleById,
 			Teacher teacherById) throws DAOException;
+	
+	public void addNewClass(String subjectCode, String scheduleId, String teacherId) throws DAOException;
 
 }
