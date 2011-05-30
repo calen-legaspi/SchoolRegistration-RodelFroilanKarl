@@ -85,7 +85,7 @@ public class Schedule {
 	}
 
 	public boolean conflictsWith(Schedule schedule) {
-		
+
 		if(this.equals(schedule)){
 			return true;
 		}
@@ -97,6 +97,10 @@ public class Schedule {
 			if(classStartTime.before(schedule.classStartTime) && classEndTime.before(schedule.classStartTime)){
 				return false;
 			} else if(classStartTime.after(schedule.classEndTime) && classEndTime.after(schedule.classEndTime)){
+				return false;
+			} else if(classStartTime.before(schedule.classStartTime) && classEndTime.equals(schedule.classStartTime)){
+				return false;
+			} else if(classStartTime.equals(schedule.classEndTime) && classEndTime.after(schedule.classEndTime)){
 				return false;
 			} else {
 				return true;

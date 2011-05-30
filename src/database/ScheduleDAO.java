@@ -10,4 +10,6 @@ public interface ScheduleDAO {
 
 	public Collection<Schedule> getAllSchedules() throws DAOException;
 
+	public Long getPrimaryKey(Schedule schedule) throws DAOException;
+
 }

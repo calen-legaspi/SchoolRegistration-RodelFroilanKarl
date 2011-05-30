@@ -9,7 +9,7 @@ import org.junit.Test;
 
 import database.DAOException;
 import database.StudentDAO;
-import database.StudentDaoJDBC;
+import database.impl.StudentDaoJDBC;
 import domain.Student;
 
 public class StudentDAOTest {

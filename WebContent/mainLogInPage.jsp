@@ -5,6 +5,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
+<link rel="StyleSheet" href="css/mainPage.css" type="text/css" title="Main CSS">
 </head>
 <body>
 

@@ -1,4 +1,4 @@
-package database;
+package database.impl;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -7,6 +7,9 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Collection;
 
+import database.DAOException;
+import database.DBConnectionFactory;
+import database.SubjectDAO;
 import domain.EducationLevel;
 import domain.Subject;
 

@@ -9,6 +9,10 @@
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
+  <error-page>
+    <exception-type>java.lang.Exception</exception-type>
+    <location>/error.jsp</location>
+  </error-page>
   <servlet>
     <servlet-name>index</servlet-name>
     <jsp-file>/index.jsp</jsp-file>
@@ -18,12 +22,36 @@
     <url-pattern>/main</url-pattern>
   </servlet-mapping>
   <servlet>
-    <servlet-name>studentEnrollmentView</servlet-name>
-    <jsp-file>/studentEnrollmentView.jsp</jsp-file>
+    <servlet-name>studentView</servlet-name>
+    <jsp-file>/student-view/studentView.jsp</jsp-file>
   </servlet>
   <servlet-mapping>
-    <servlet-name>studentEnrollmentView</servlet-name>
-    <url-pattern>/student-enroll</url-pattern>
+    <servlet-name>studentView</servlet-name>
+    <url-pattern>/student-account</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>studentCalculateTuition</servlet-name>
+    <jsp-file>/student-view/studentCalculateTuition.jsp</jsp-file>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>studentCalculateTuition</servlet-name>
+    <url-pattern>/student-tuition-page</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>studentEnrollSubject</servlet-name>
+    <jsp-file>/student-view/studentEnrollSubject.jsp</jsp-file>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>studentEnrollSubject</servlet-name>
+    <url-pattern>/student-enroll-page</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>studentViewEnrolledClasses</servlet-name>
+    <jsp-file>/student-view/studentViewEnrolledClasses.jsp</jsp-file>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>studentViewEnrolledClasses</servlet-name>
+    <url-pattern>/student-enrolled-page</url-pattern>
   </servlet-mapping>
   <servlet>
     <description></description>
@@ -54,5 +82,55 @@
   <servlet-mapping>
     <servlet-name>LogInServlet</servlet-name>
     <url-pattern>/LogInServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>StudentViewServlet</display-name>
+    <servlet-name>StudentViewServlet</servlet-name>
+    <servlet-class>servlet.StudentViewServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>StudentViewServlet</servlet-name>
+    <url-pattern>/StudentViewServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>StudentViewEnrolledServlet</display-name>
+    <servlet-name>StudentViewEnrolledServlet</servlet-name>
+    <servlet-class>servlet.StudentViewEnrolledServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>StudentViewEnrolledServlet</servlet-name>
+    <url-pattern>/student-enrolled</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>EnrollStudentServlet</display-name>
+    <servlet-name>EnrollStudentServlet</servlet-name>
+    <servlet-class>servlet.EnrollStudentServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>EnrollStudentServlet</servlet-name>
+    <url-pattern>/enroll</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>StudentViewEnrollServlet</display-name>
+    <servlet-name>StudentViewEnrollServlet</servlet-name>
+    <servlet-class>servlet.StudentViewEnrollServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>StudentViewEnrollServlet</servlet-name>
+    <url-pattern>/student-enroll</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>StudentViewCalculateTuitionServlet</display-name>
+    <servlet-name>StudentViewCalculateTuitionServlet</servlet-name>
+    <servlet-class>servlet.StudentViewCalculateTuitionServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>StudentViewCalculateTuitionServlet</servlet-name>
+    <url-pattern>/student-tuition</url-pattern>
   </servlet-mapping>
 </web-app>

@@ -1,5 +1,7 @@
 package domain;
 
+import java.sql.Time;
+
 public class SchoolClass {
 
 	private Schedule classSchedule;
@@ -45,6 +47,22 @@ public class SchoolClass {
 		return classCurrentQuantity;
 	}
 
+	public String getClassSubjectName() {
+		return this.getClassSubject().getCourseName();
+	}
+	
+	public Time getClassScheduleStartTime() {
+		return this.getClassSchedule().getClassStartTime();
+	}
+	
+	public Time getClassScheduleEndTime() {
+		return this.getClassSchedule().getClassEndTime();
+	}
+	
+	public String getClassTeacherName() {
+		return this.getClassTeacher().getTeacherLastName()+", "+this.getClassTeacher().getTeacherFirstName(); 
+	}
+	
 	@Override
 	public int hashCode() {
 		final int prime = 31;

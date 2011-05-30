@@ -49,3 +49,17 @@
     background-color: white;
     border: 1px #000000 solid;
   }
+  
+  span.menuheader{
+    font-weight: bold;
+    text-decoration: underline;
+  }
+  
+  table.classDisplay, td {
+  	padding: 10px;
+  	border: 1px #222222 solid;
+  }
+  
+  th {  	
+	background: #AAAAAA;
+  }

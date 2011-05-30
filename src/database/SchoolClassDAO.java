@@ -2,8 +2,12 @@ package database;
 
 import java.util.Collection;
 
+import domain.Schedule;
 import domain.ScheduleConflictException;
 import domain.SchoolClass;
+import domain.Student;
+import domain.Subject;
+import domain.Teacher;
 
 public interface SchoolClassDAO {
 
@@ -12,5 +16,10 @@ public interface SchoolClassDAO {
 
 	public Collection<SchoolClass> getAllClasses() throws DAOException,
 			ScheduleConflictException;
+
+	public Collection<SchoolClass> getClassesOfStudent(Student newStudent) throws DAOException;
+
+	public Long getPrimaryKey(Subject subjectById, Schedule scheduleById,
+			Teacher teacherById) throws DAOException;
 
 }

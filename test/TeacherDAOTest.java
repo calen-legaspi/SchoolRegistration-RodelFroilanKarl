@@ -7,6 +7,7 @@ import org.junit.Test;
 
 import database.DAOException;
 import database.TeacherDAO;
+import database.impl.TeacherDaoJDBC;
 import domain.Teacher;
 
 
@@ -15,7 +16,7 @@ public class TeacherDAOTest {
 	@Test
 	public void testGetTeacherById() throws DAOException {
 		
-		TeacherDAO teacherDAO = new TeacherDAO();		
+		TeacherDAO teacherDAO = new TeacherDaoJDBC();		
 		Teacher newTeacher = teacherDAO.getTeacherById(1);				
 		Teacher expectedTeacher = new Teacher(1, "JOHN", "MILLER");
 		
@@ -28,7 +29,7 @@ public class TeacherDAOTest {
 	{
 		Collection<Teacher> expectedCollectionOfAllTeachers = new ArrayList<Teacher>();
 		
-		TeacherDAO teacherDAO = new TeacherDAO();
+		TeacherDAO teacherDAO = new TeacherDaoJDBC();
 		
 		expectedCollectionOfAllTeachers.add(new Teacher(1,"JOHN", "MILLER"));
 		expectedCollectionOfAllTeachers.add(new Teacher(2,"MIKHAIL", "KOSBONOK"));

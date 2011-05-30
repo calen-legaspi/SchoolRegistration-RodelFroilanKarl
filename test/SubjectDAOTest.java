@@ -10,7 +10,7 @@ import org.junit.Test;
 
 import database.DAOException;
 import database.SubjectDAO;
-import database.SubjectDaoJDBC;
+import database.impl.SubjectDaoJDBC;
 import domain.EducationLevel;
 import domain.Subject;
 

@@ -15,7 +15,7 @@ public class Subject {
 	
 	@Override
 	public String toString(){
-		return courseCode+", "+courseName+", "+courseDescrip+", "+courseLevel+"\n";
+		return courseCode+", "+courseName+", "+courseLevel+"\n";
 	}
 
 	public String getCourseCode() {

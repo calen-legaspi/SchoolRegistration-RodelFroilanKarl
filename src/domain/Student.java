@@ -4,11 +4,9 @@ import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.Collection;
 
-import services.StudentService;
-
 public class Student extends SystemUser {
 
-	private long myIdNo;
+	private Long myIdNo;
 	private String myFirstName;
 	private String myLastName;
 	private Collection<SchoolClass> studentClassList;
@@ -59,14 +57,14 @@ public class Student extends SystemUser {
 		return false;
 	}
 	
-    public BigDecimal calculateTuition(Student testStudent) {
+    public BigDecimal calculateTuition() {
 		
-		BigDecimal total = StudentService.miscFees;
+		BigDecimal total = Fees.MISC.getCost();
 		
-		for(SchoolClass course : testStudent.getEnrolledClasses()){
+		for(SchoolClass course : getEnrolledClasses()){
 			switch(course.getClassSubject().getCourseLevel()){
-			  case UNDERGRADUATE: total = total.add(StudentService.undergraduateFees); break;
-			  case GRADUATE: total = total.add(StudentService.graduateFees); break;
+			  case UNDERGRADUATE: total = total.add(Fees.UNDERGRADUATE.getCost()); break;
+			  case GRADUATE: total = total.add(Fees.GRADUATE.getCost()); break;
 			}
 		}
 		
@@ -95,7 +93,7 @@ public class Student extends SystemUser {
 		return true;
 	}
 
-	public long getMyIdNo() {
+	public Long getMyIdNo() {
 		return myIdNo;
 	}
 
